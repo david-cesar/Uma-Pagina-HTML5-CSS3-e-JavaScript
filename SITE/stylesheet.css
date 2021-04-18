@@ -1,0 +1,148 @@
+/* Reseta configurações de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Começo das configurações */
+/* Define tamanho, cor de fundo e preenchimentos laterais do cabeçalho */
+header {
+    height: 10vh;
+    background-color: #010101;
+}
+
+/* Define a cor dos links dentro do cabeçalho */
+header a {
+    color: #fff;
+}
+
+/* Posiciona a tag <nav> como relativa para que os elementos dentro dela possam ser definidos como absolutos e não escapar */
+nav {
+    position: relative;
+}
+
+/* Ajusta a logo (para a qual eu não tive tempo - se quiser ajuda ai e cria, mas não garanto colocar depois) */
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    margin-right: auto;
+}
+
+/* Define o menu na navegação: altura que ela ocupará dentro do cabeçalho, e ajusta seus conteúdos */
+nav ul {
+    list-style: none;
+    width: 40%;
+    height: 100%;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Ajusta os itens de lista para ficarem um ao lado do outro */
+nav ul li {
+     display: inline;
+}
+
+/* Cria um espaçamento entre os itens da lista aumentando o preenchendo dos links e consequentemente a área clicável */
+nav ul li a {
+     padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+
+nav ul {
+    position: fixed;
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    -moz-clip-path: circle(100px at 90% -20%);
+    -o-clip-path: circle(100px at 90% -20%);
+    transition: all 1s ease-in-out;
+}
+
+nav ul.open {
+    clip-path: circle(1000px at 90% -20%);
+    -webkit-clip-path: circle(1000px at 90% -20%);
+    -moz-clip-path: circle(100px at 90% -20%);
+    -o-clip-path: circle(100px at 90% -20%);
+}
+
+/* Cria a caixa branca em torno das 3 linhas do menu para celular */
+header nav div.menu-no-celular {
+    position: absolute;
+    right: 5%;
+    top: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border: 1px solid #fff;
+}
+
+/* Cria a linha central no meio da caixa do menu para celular */
+header nav div.menu-no-celular-linha {
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+
+/* Cria as linhas acima e abaixo do menu para celular */
+header nav div.menu-no-celular-linha::before,
+header nav div.menu-no-celular-linha::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+
+/* Move a linha criada para ficar acima para sua posição */
+header nav div.menu-no-celular-linha::before {
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+}
+
+/* Move a linha criada para ficar abaixo para sua posição */
+header nav div.menu-no-celular-linha::after {
+    transform: translateY(8px);
+    -webkit-transform: translateY(8px);
+    -o-transform: translateY(8px);
+    -moz-transform: translateY(8px);
+}
+
+/* Faz a linha central desaparecer indo para esquerda */
+header nav div.menu-no-celular.open .menu-no-celular-linha {
+    transform: translateX(-30px);
+    background: transparent;
+    box-shadow: none;
+}
+
+header nav div.menu-no-celular.open .menu-no-celular-linha::before {
+    transform: rotate(45deg) translate(22px, -22px);
+}
+
+header nav div.menu-no-celular.open .menu-no-celular-linha::after {
+    transform: rotate(-45deg) translate(22px, 22px);
+}
+
+} /* Finaliza a @media para celular */
