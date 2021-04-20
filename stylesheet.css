@@ -1,3 +1,7 @@
+/* Importa fontes de origem externa para usarmos no projeto */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
+
 /* Reseta as configurações de todos os elementos do HTML */
 * {
     margin: 0;
@@ -7,6 +11,27 @@
     color: inherit;
 }
 
+/*****************************
+**** CONFIGURAÇÕES GERAIS ****
+******************************/
+/* Define a fonte padrão para títulos */
+h1, h2, h3, h4, h5 {
+    font-family: 'Lora', serif;
+}
+/* Define o tamanho e fonte para os textos comuns */
+p, a, li, span, label {
+    font-size: 1em;
+    font-family: 'Adamina', serif;
+}
+/* Cria um preenchimento (respiro) abaixo dos elementos para que não fiquem muito juntos*/
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: .5em;
+}
+/* Configura as seções */
+section {
+    padding: 40px 0 20px 0;
+}
+
 /***********************************************************
 **** CONFIGURAÇÕES PARA A BARRA DE NAVEGAÇÃO NO DESKTOP ****
 ***********************************************************/
@@ -14,7 +39,7 @@
 /* Define tamanho, cor de fundo e preenchimentos laterais do cabeçalho */
 header {
     height: 10vh;
-    background-color: #010101;
+    background-color: #000;
 }
 
 /* Define a cor dos links dentro do cabeçalho */
@@ -32,24 +57,26 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-
+/* Esconde o menu hamburguer para telas maiores que 768px (definido depois na @media) */
 nav .menu-hamburguer {
     display: none;
 }
 
-/* Ajusta a logo (para a qual eu não tive tempo - se quiser ajuda ai e cria, mas não garanto colocar depois) */
+/* Ajusta a logo (para a qual eu não tive tempo e nem sei se terei) */
 nav .logo {
     width: 50%;
 }
 
-/* Define o menu na navegação: altura que ela ocupará dentro do cabeçalho, e ajusta seus conteúdos */
+/* Define o menu na navegação: altura que ela ocupará dentro do cabeçalho */
 nav .menus {
     width: 50%;
 }
 
+/* Ajusta os menus HTML5, CSS3 e JavaSccript na barra de navegação*/
 nav .menus ul {
     display: flex;
     justify-content: space-evenly;
+    list-style: none;
 }
 
 /* Ajusta os itens de lista para ficarem um ao lado do outro */
@@ -57,7 +84,7 @@ nav ul li {
      display: inline;
 }
 
-/* Cria um espaçamento entre os itens da lista aumentando o preenchendo dos links e consequentemente a área clicável */
+/* Aumenta o preenchendo dos links e consequentemente a área clicável */
 nav ul li a {
      padding: 5px;
 }
@@ -67,16 +94,19 @@ nav ul li a {
 **** CONFIGURAÇÕES PARA A BARRA DE NAVEGAÇÃO NO CELULAR ****
 ***********************************************************/
 @media screen and (max-width: 768px) {
-    header a {
+    /* Ajusta o tamanho da fonte da logo - não necessário se for imagem (usar atributo alt) */
+    header .logo a {
         font-size: 12px;
     }
+    /* Posiciona a logo acima de qualquer coisa */
     .logo {
         z-index: 2;
     }
+    /* Expande a <div> pai dos menus para a largura total da tela */
     nav .menus {
         width: 100%;
     }
-
+    /* Expande a área dos menus para a largura total da tela, ajusta os itens em coluna e cria a animação */
     nav .menus ul {
         position: fixed;
         right:0;
@@ -92,19 +122,18 @@ nav ul li a {
         clip-path: circle(100px at 90% -20%);
         transition: all 1s ease-in-out;
     }
-
+    /* Configura o estado final da animação */
     nav .menus ul.open {
         -webkit-clip-path: circle(1000px at 90% -20%);
         -moz-clip-path: circle(100px at 90% -20%);
         -o-clip-path: circle(100px at 90% -20%);
         clip-path: circle(1000px at 90% -20%);
     }
-
-    /* Cria a caixa branca em torno das 3 linhas do menu para celular */
+    /* Configura a caixa branca em torno das 3 linhas do menu para celular */
     header nav div.menu-hamburguer {
         position: absolute;
         right: 5%;
-        top: 15%;
+        top: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -114,8 +143,7 @@ nav ul li a {
         transition: all .5s ease-in-out;
         border: 1px solid #fff;
     }
-
-    /* Cria a linha central no meio da caixa do menu para celular */
+    /* Configura a linha central no meio da caixa do menu para celular */
     header nav div.menu-hamburguer-linha {
         width: 25px;
         height: 2px;
@@ -124,7 +152,7 @@ nav ul li a {
         transition: all .5s ease-in-out;
     }
 
-    /* Cria as linhas acima e abaixo do menu para celular */
+    /* Cria as linhas acima e abaixo do menu para celular replicando a configuração acima */
     header nav div.menu-hamburguer-linha::before,
     header nav div.menu-hamburguer-linha::after {
         content: '';
@@ -135,7 +163,6 @@ nav ul li a {
         border-radius: 10px;
         transition: all .5s ease-in-out;
     }
-
     /* Move a linha criada para ficar acima para sua posição */
     header nav div.menu-hamburguer-linha::before {
         transform: translateY(-8px);
@@ -143,7 +170,6 @@ nav ul li a {
         -o-transform: translateY(-8px);
         -moz-transform: translateY(-8px);
     }
-
     /* Move a linha criada para ficar abaixo para sua posição */
     header nav div.menu-hamburguer-linha::after {
         transform: translateY(8px);
@@ -151,29 +177,20 @@ nav ul li a {
         -o-transform: translateY(8px);
         -moz-transform: translateY(8px);
     }
-
-    /* Faz a linha central desaparecer indo para esquerda */
+    /* Faz a linha central desaparecer indo para esquerda quando pressiona o menu */
     header nav div.menu-hamburguer.open .menu-hamburguer-linha {
         transform: translateX(-30px);
         background: transparent;
         box-shadow: none;
     }
-
+    /* Rotaciona e reposiciona a linha superior quando o menu é pressionado */
     header nav div.menu-hamburguer.open .menu-hamburguer-linha::before {
         transform: rotate(45deg) translate(22px, -22px);
     }
-
+    /* Rotaciona e reposiciona a linha inferior quando o menu é pressionado */
     header nav div.menu-hamburguer.open .menu-hamburguer-linha::after {
         transform: rotate(-45deg) translate(22px, 22px);
     }
 
-} /* Finaliza a @media para celular */
+} /* Finaliza a @media para o cabeçalho no celular */
 
-
-/*************************************
-**** CONFIGURAÇÕES PARA AS SEÇÕES ****
-**************************************/
-section {
-    padding: 40px 0;
-    text-align: center;
-}
