@@ -1,62 +1,203 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UP! HTML5, CSS3 e JavaScript em uma única página</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="shortcut icon" href="/imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="folha-de-estilo.css">
+    <link rel="stylesheet" href="folha-de-estilo-celular.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/6NC6PDc/favicon.png" type="image/x-icon">
 </head>
+
 <body>
 
-<header>
-    <nav>
-        <div class="logo">
-            <a href="/" class="logo-clicavel">UMA LOGO BEM PLANEJADA, OU NÃO</a>
-        </div>
-        <div class="menus">
-            <ul>
-                <li class="menu-item"><a href="#">HTML5</a></li>
-                <li class="menu-item"><a href="#">CSS3</a></li>
-                <li class="menu-item"><a href="#">JAVASCRIPT</a></li>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/" class="logo-clicavel">UMA LOGO BEM PLANEJADA, OU NÃO</a>
+            </div>
+            <div class="menus">
+                <ul>
+                    <li class="menu-item"><a href="#">HTML5</a></li>
+                    <li class="menu-item"><a href="#">CSS3</a></li>
+                    <li class="menu-item"><a href="#">JAVASCRIPT</a></li>
+                </ul>
+            </div>
+            <div class="menu-hamburguer">
+                <div class="menu-hamburguer-linha"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="introducao">
+            <h1>UP! Uma Página: HTML5, CSS3 e JavaScript</h1>
+            <p>A proposta dessa página é reunir os principais recursos do HTML5, CSS3 e JavaScript.</p>
+            <p>Provavelmente você vai usá-los todos os dias, com alguma frequência vai precisar deles ou então são recomendados como boa prática.</p>
+            <p>Espero que lhe ajude.</p>
+        </section>
+        <!-- Fim da seção de introdução -->
+
+        <section class="secao-html5">
+            <h1>Principais recursos do HTML5:</h1>
+            <h2>Tags:</h2>
+            <ul class="html5-lista">
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;h1&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;h2&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;h3&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;h4&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;h5&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;h6&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;p&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;strong&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;em&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;sup&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;sub&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;a&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;ul&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;ol&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;dl&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;blockquote&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;q&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;abbr&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;address&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;html&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;head&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;meta&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;link&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;title&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;body&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;header&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;section&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;aside&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;footer&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;script&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;div&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;span&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;table&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;label&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;input&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;button&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;x&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;x&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;x&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;x&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;x&gt;</code></a>
+                </li>
+                <li class="html5-lista-item">
+                    <a href=""><code>&lt;x&gt;</code></a>
+                </li>
             </ul>
+        </section>
+        <!-- Fim da seção sobre HTML5 -->
+
+        <section class="secao-css3">
+            <h1>CSS 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
+        </section>
+        <!-- Fim da seção sobre CSS3 -->
+
+        <section class="secao-javascript">
+            <h1>JavaScript</h1>
+
+        </section>
+        <!-- Fim da seção sobre JavaScript -->
+
+    </div>
+    <!-- Fecha o container -->
+    <footer>
+        <div class="container">
+            <address>
+                <p>dcpds &copy; 2021</p>
+            </address>
         </div>
-        <div class="menu-hamburguer">
-            <div class="menu-hamburguer-linha"></div>
-        </div>
-    </nav>
-</header>
-
-<section>
-    <h1>UP! Uma Página: HTML5, CSS3 e JavaScript</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-</section>
-<section>
-    <h1>UP! Uma Página: HTML5, CSS3 e JavaScript</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-</section>
-<section>
-    <h1>UP! Uma Página: HTML5, CSS3 e JavaScript</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-</section>
-<section>
-    <h1>UP! Uma Página: HTML5, CSS3 e JavaScript</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem eos nobis doloribus minus, consectetur dolor est repellendus magnam omnis aspernatur sapiente eaque recusandae corporis facere quasi ab voluptatibus reprehenderit?</p>
-</section>
-
-<footer>
-
-</footer>
-
-<script src="scripts.js"></script>
+    </footer>
+    <script src="javascripts.js"></script>
 </body>
+
 </html>

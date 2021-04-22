@@ -1,102 +1,10 @@
-/* Importa fontes de origem externa para usarmos no projeto */
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
-
-/* Reseta as configurações de todos os elementos do HTML */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    color: inherit;
-}
-
-/*****************************
-**** CONFIGURAÇÕES GERAIS ****
-******************************/
-/* Define a fonte padrão para títulos */
-h1, h2, h3, h4, h5 {
-    font-family: 'Lora', serif;
-}
-/* Define o tamanho e fonte para os textos comuns */
-p, a, li, span, label {
-    font-size: 1em;
-    font-family: 'Adamina', serif;
-}
-/* Cria um preenchimento (respiro) abaixo dos elementos para que não fiquem muito juntos*/
-h1, h2, h3, h4, h5, h6, p {
-    margin-bottom: .5em;
-}
-/* Configura as seções */
-section {
-    padding: 40px 0 20px 0;
-}
-
-/***********************************************************
-**** CONFIGURAÇÕES PARA A BARRA DE NAVEGAÇÃO NO DESKTOP ****
-***********************************************************/
-
-/* Define tamanho, cor de fundo e preenchimentos laterais do cabeçalho */
-header {
-    height: 10vh;
-    background-color: #000;
-}
-
-/* Define a cor dos links dentro do cabeçalho */
-header a {
-    color: #fff;
-}
-
-/* Ajusta os conteúdos dentro da tag <nav> */
-nav {
-    position: relative;
-    width: 90%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-/* Esconde o menu hamburguer para telas maiores que 768px (definido depois na @media) */
-nav .menu-hamburguer {
-    display: none;
-}
-
-/* Ajusta a logo (para a qual eu não tive tempo e nem sei se terei) */
-nav .logo {
-    width: 50%;
-}
-
-/* Define o menu na navegação: altura que ela ocupará dentro do cabeçalho */
-nav .menus {
-    width: 50%;
-}
-
-/* Ajusta os menus HTML5, CSS3 e JavaSccript na barra de navegação*/
-nav .menus ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-}
-
-/* Ajusta os itens de lista para ficarem um ao lado do outro */
-nav ul li {
-     display: inline;
-}
-
-/* Aumenta o preenchendo dos links e consequentemente a área clicável */
-nav ul li a {
-     padding: 5px;
-}
-
-
-/***********************************************************
-**** CONFIGURAÇÕES PARA A BARRA DE NAVEGAÇÃO NO CELULAR ****
-***********************************************************/
 @media screen and (max-width: 768px) {
-    /* Ajusta o tamanho da fonte da logo - não necessário se for imagem (usar atributo alt) */
+    /***********************************************************
+    **** CONFIGURAÇÕES PARA A BARRA DE NAVEGAÇÃO NO CELULAR ****
+    ***********************************************************/
+    /* Ajusta o tamanho da fonte da logo - não é necessário se for uma imagem (nessa caso, usar atributo alt) */
     header .logo a {
-        font-size: 12px;
+        font-size: .7em;
     }
     /* Posiciona a logo acima de qualquer coisa */
     .logo {
@@ -109,7 +17,7 @@ nav ul li a {
     /* Expande a área dos menus para a largura total da tela, ajusta os itens em coluna e cria a animação */
     nav .menus ul {
         position: fixed;
-        right:0;
+        right: 0;
         background-color: #000;
         height: 100vh;
         width: 100%;
@@ -151,7 +59,6 @@ nav ul li a {
         border-radius: 10px;
         transition: all .5s ease-in-out;
     }
-
     /* Cria as linhas acima e abaixo do menu para celular replicando a configuração acima */
     header nav div.menu-hamburguer-linha::before,
     header nav div.menu-hamburguer-linha::after {
@@ -191,6 +98,20 @@ nav ul li a {
     header nav div.menu-hamburguer.open .menu-hamburguer-linha::after {
         transform: rotate(-45deg) translate(22px, 22px);
     }
+    /********************************
+    *** CONFIGURAÇÕES DE CONTEÚDO ***
+    ********************************/
+    .secao-html5 .html5-lista {
+        column-count: 3;
+    }
+    address {
+        text-align: center;
+    }
+    .secao-html5 .html5-lista .html5-lista-item {
+        text-align: left;
+        font-size: .8em;
+    }
+}
 
-} /* Finaliza a @media para o cabeçalho no celular */
 
+/* Finaliza a @media para o cabeçalho no celular */
