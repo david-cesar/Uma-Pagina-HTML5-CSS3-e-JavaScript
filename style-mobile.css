@@ -3,22 +3,18 @@
     **** CONFIGURAÇÕES PARA A BARRA DE NAVEGAÇÃO NO CELULAR ****
     ***********************************************************/
     /* Ajusta o tamanho da fonte da logo - não é necessário se for uma imagem (nessa caso, usar atributo alt) */
-    header .logo a {
+    .header .logo {
         font-size: .7em;
     }
     /* Posiciona a logo acima de qualquer coisa */
     .logo {
         z-index: 2;
     }
-    /* Expande a <div> pai dos menus para a largura total da tela */
-    nav .menus {
-        width: 100%;
-    }
     /* Expande a área dos menus para a largura total da tela, ajusta os itens em coluna e cria a animação */
-    nav .menus ul {
+    .header-nav.menu {
         position: fixed;
         right: 0;
-        background-color: #000;
+        background: var(--turquoise);
         height: 100vh;
         width: 100%;
         flex-direction: column;
@@ -31,17 +27,14 @@
         transition: all 1s ease-in-out;
     }
     /* Configura o estado final da animação */
-    nav .menus ul.open {
+    .header-nav.menu.open {
         -webkit-clip-path: circle(1000px at 90% -20%);
         -moz-clip-path: circle(100px at 90% -20%);
         -o-clip-path: circle(100px at 90% -20%);
         clip-path: circle(1000px at 90% -20%);
     }
     /* Configura a caixa branca em torno das 3 linhas do menu para celular */
-    header nav div.menu-hamburguer {
-        position: absolute;
-        right: 5%;
-        top: 20%;
+    .menu-hamburguer {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,7 +45,7 @@
         border: 1px solid #fff;
     }
     /* Configura a linha central no meio da caixa do menu para celular */
-    header nav div.menu-hamburguer-linha {
+    .menu-hamburguer.line {
         width: 25px;
         height: 2px;
         background: #fff;
@@ -60,8 +53,8 @@
         transition: all .5s ease-in-out;
     }
     /* Cria as linhas acima e abaixo do menu para celular replicando a configuração acima */
-    header nav div.menu-hamburguer-linha::before,
-    header nav div.menu-hamburguer-linha::after {
+    .menu-hamburguer.line::before,
+    .menu-hamburguer.line::after {
         content: '';
         position: absolute;
         width: 25px;
@@ -71,47 +64,32 @@
         transition: all .5s ease-in-out;
     }
     /* Move a linha criada para ficar acima para sua posição */
-    header nav div.menu-hamburguer-linha::before {
+    .menu-hamburguer.line::before {
         transform: translateY(-8px);
         -webkit-transform: translateY(-8px);
         -o-transform: translateY(-8px);
         -moz-transform: translateY(-8px);
     }
     /* Move a linha criada para ficar abaixo para sua posição */
-    header nav div.menu-hamburguer-linha::after {
+    .menu-hamburguer.line::after {
         transform: translateY(8px);
         -webkit-transform: translateY(8px);
         -o-transform: translateY(8px);
         -moz-transform: translateY(8px);
     }
     /* Faz a linha central desaparecer indo para esquerda quando pressiona o menu */
-    header nav div.menu-hamburguer.open .menu-hamburguer-linha {
+    .menu-hamburguer.open .menu-hamburguer.line {
         transform: translateX(-30px);
         background: transparent;
         box-shadow: none;
     }
     /* Rotaciona e reposiciona a linha superior quando o menu é pressionado */
-    header nav div.menu-hamburguer.open .menu-hamburguer-linha::before {
+    .menu-hamburguer.open .menu-hamburguer.line::before {
         transform: rotate(45deg) translate(22px, -22px);
     }
     /* Rotaciona e reposiciona a linha inferior quando o menu é pressionado */
-    header nav div.menu-hamburguer.open .menu-hamburguer-linha::after {
+    .menu-hamburguer.open .menu-hamburguer.line::after {
         transform: rotate(-45deg) translate(22px, 22px);
     }
-    /********************************
-    *** CONFIGURAÇÕES DE CONTEÚDO ***
-    ********************************/
-    .secao-html5 .html5-lista {
-        column-count: 3;
-    }
-    address {
-        text-align: center;
-    }
-    .secao-html5 .html5-lista .html5-lista-item {
-        text-align: left;
-        font-size: .8em;
-    }
-}
-
-
-/* Finaliza a @media para o cabeçalho no celular */
+    
+} /* Finaliza a @media para o cabeçalho no celular */

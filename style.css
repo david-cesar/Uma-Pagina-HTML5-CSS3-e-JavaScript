@@ -1,0 +1,110 @@
+/* Importa fontes de origem externa para usarmos no projeto */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
+
+/* Define a paleta de cores em variáveis */
+:root {
+    --black: #393e46;
+    --turquoise: #00adb5; 
+    --hover: #aad8d3;
+    --bg: #eeeeee;
+}
+
+/* Reseta as configurações de todos os elementos do HTML */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: var(--black);
+}
+
+/*****************************
+**** CONFIGURAÇÕES GERAIS ****
+******************************/
+/* Define a fonte padrão para títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+}
+
+/* Define o tamanho e fonte para os textos comuns */
+body, p, a, li, span, label {
+    font-size: 1em;
+    font-family: 'Adamina', serif;
+}
+
+/* Cria um preenchimento (respiro) abaixo dos elementos para que não fiquem muito juntos*/
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: .5em;
+}
+
+/* GRID GERAL DE TODO O CONTEÚDO */
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 5fr;
+    grid-template-areas: 
+    "header header  header  header  header  header"
+    "aside  main    main    main    main    main"    
+    "footer footer  footer  footer  footer  footer";
+}
+
+/* CABEÇALHO */
+/* Ajusta a posição do <header> e seus elementos */
+.header {
+    grid-area: header;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background: var(--turquoise);
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.5);
+}
+/* Ajusta os itens do menu da <header> */
+.header-nav.menu {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* Ajusta o espaço entre os elementos */
+.header-nav.item + .header-nav.item {
+    margin-left: 20px;
+}
+li.header-nav.item a {
+    padding: 5px;
+    color: #fff;
+}
+/* Esconde o menu hamburguer para telas maiores que 768px (definido depois na @media) */
+.menu-hamburguer {
+    display: none;
+}
+
+/* ASIDE */
+.aside {
+    grid-area: aside;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+/*CONTEÚDO PRINCIPAL*/
+.main {
+    grid-area: main;
+    padding: 0 30px;
+    max-width: 1200px;
+}
+
+.main section {
+    padding: 60px 0 0 0;
+}
+
+/* FOOTER */
+.footer {
+    grid-area: footer;
+    padding: 30px;
+    text-align: center;
+    background: var(--turquoise);
+}
+
+.footer p {
+    font-size: .8em;
+    color: #fff;
+}

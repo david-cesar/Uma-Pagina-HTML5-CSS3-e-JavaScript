@@ -1,5 +1,5 @@
 const menuNoCelular = document.querySelector('.menu-hamburguer');
-const animacaoMenu = document.querySelector('nav .menus ul');
+const animacaoMenu = document.querySelector('.header-nav.menu');
 let menuAberto = false;
 
 menuNoCelular.addEventListener('click', () => {

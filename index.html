@@ -6,84 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UP! HTML5, CSS3 e JavaScript em uma única página</title>
-    <link rel="stylesheet" href="folha-de-estilo.css">
-    <link rel="stylesheet" href="folha-de-estilo-celular.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mobile.css">
     <link rel="shortcut icon" href="https://i.ibb.co/6NC6PDc/favicon.png" type="image/x-icon">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="/" class="logo-clicavel">UMA LOGO BEM PLANEJADA, OU NÃO</a>
-            </div>
-            <div class="menus">
-                <ul>
-                    <li class="menu-item"><a href="#">HTML5</a></li>
-                    <li class="menu-item"><a href="#">CSS3</a></li>
-                    <li class="menu-item"><a href="#">JAVASCRIPT</a></li>
+    <div class="grid-container">
+        <header class="header">
+            <a href="/" class="logo">UMA LOGO BEM PLANEJADA, OU NÃO</a>
+            <nav class="header-nav">                
+                <ul class="header-nav menu">
+                    <li class="header-nav item"><a href="#">HTML 5</a></li>
+                    <li class="header-nav item"><a href="#">CSS 3</a></li>
+                    <li class="header-nav item"><a href="#">JavaScript</a></li>
                 </ul>
-            </div>
-            <div class="menu-hamburguer">
-                <div class="menu-hamburguer-linha"></div>
-            </div>
-        </nav>
-    </header>
-
-    <div class='conteudo-total'>
-        <aside>
-            <nav>
-                <ul>
-                    <li class="aside-item aside-title">HTML 5
-                        <ul>
-                            <li class="aside-item">Tags</li>
-                            <li class="aside-item">Atributos Gerais</li>
-                            <li class="aside-item">Atributos Específicos</li>
-                        </ul>
-                    </li>
-                    <li class="aside-item aside-title">CSS 3
-                        <ul>
-                            <li class="aside-item">Seletores</li>
-                            <li class="aside-item">Propriedades & Vaores</li>
-                            <li class="aside-item">Flexbox</li>
-                            <li class="aside-item">Grid Layout</li>
-                        </ul>
-                    </li>
-                    <li class="aside-item aside-title">Java Script
-                        <ul>
-                            <li class="aside-item">Variáveis</li>
-                            <li class="aside-item">Tipos de Dados</li>
-                            <li class="aside-item">
-                                Operadores
-                                <ul>
-                                    <li class="aside-item">Atribuição</li>
-                                    <li class="aside-item">Aritméticos</li>
-                                    <li class="aside-item">Comparação</li>
-                                    <li class="aside-item">Lógicos</li>
-                                    <li class="aside-item">Incremento e Decremento</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                
+                <div class="menu-hamburguer">
+                    <div class="menu-hamburguer line"></div>
+                </div>
             </nav>
+        </header>
+
+        <aside class="aside">
+                <nav>
+                    <ul>
+                        <li class="aside-item aside-title">HTML 5
+                            <ul>
+                                <li class="aside-item">Tags</li>
+                                <li class="aside-item">Atributos Gerais</li>
+                                <li class="aside-item">Atributos Específicos</li>
+                            </ul>
+                        </li>
+                        <li class="aside-item aside-title">CSS 3
+                            <ul>
+                                <li class="aside-item">Seletores</li>
+                                <li class="aside-item">Propriedades & Vaores</li>
+                                <li class="aside-item">Flexbox</li>
+                                <li class="aside-item">Grid Layout</li>
+                            </ul>
+                        </li>
+                        <li class="aside-item aside-title">Java Script
+                            <ul>
+                                <li class="aside-item">Variáveis</li>
+                                <li class="aside-item">Tipos de Dados</li>
+                                <li class="aside-item">
+                                    Operadores
+                                    <ul>
+                                        <li class="aside-item">Atribuição</li>
+                                        <li class="aside-item">Aritméticos</li>
+                                        <li class="aside-item">Comparação</li>
+                                        <li class="aside-item">Lógicos</li>
+                                        <li class="aside-item">Incremento e Decremento</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
         </aside>
-        <main>
-            <section>
-                <h1>Exemplo</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cumque modi odit veritatis, libero quisquam voluptate repellat aut nulla molestiae nihil fugit esse sit quis. Voluptas aut assumenda neque provident.</p>
-            </section>
+
+        <main class="main">
+                <section>
+                    <h1>Exemplo</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cumque modi odit veritatis, libero quisquam voluptate repellat aut nulla molestiae nihil fugit esse sit quis. Voluptas aut assumenda neque provident.</p>
+                </section>
         </main>
-    </div>
-    
-    <footer>
-        <div class="container">
+        
+        <footer  class="footer">
             <address>
                 <p>dcpds &copy; 2021</p>
             </address>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
     <script src="javascripts.js"></script>
 </body>
 
