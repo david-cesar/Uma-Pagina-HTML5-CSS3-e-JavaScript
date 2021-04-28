@@ -124,6 +124,12 @@ li.header-nav.item a:hover {
     padding: 60px 0 0 0;
 }
 
+.inline-tag {
+    background: #efefef;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
 /* FOOTER */
 .footer {
     grid-area: footer;
